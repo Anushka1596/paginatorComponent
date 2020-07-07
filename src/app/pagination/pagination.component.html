@@ -1,0 +1,24 @@
+<div class="pagination">
+  <div>Items Per Page : 
+    <select class="form-control" [(ngModel)]="itemsPerPage" 
+    (change)="changedItemsPerChange(itemsPerPage)">
+      <option value=5>5</option>
+      <option value=10>10</option>
+      <option value=25>25</option>
+      <option value=100>100</option>
+    </select>
+  
+<div class="slider">
+  <b *ngIf="itemsPerPage <= total">{{ (page == noOfPages && lastPageLeft > 0) ? lastPageLeft : itemsPerPage }}</b>
+          <b *ngIf="itemsPerPage > total">{{ total }}</b> of
+          <b>{{ total }}</b>
+  <span><button (click)="previousPage()" [disabled]="page <= 1"> < </button> </span>
+  <span><button (click)="nextPage()" [disabled]="page >= noOfPages">></button></span>
+</div>
+</div>
+</div>
+<hr/>
+<div class="currentPage">
+  Current Page : {{page}} / {{noOfPages}}
+
+</div>

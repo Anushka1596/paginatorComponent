@@ -1,0 +1,26 @@
+.pagination{
+  padding: 10px ;
+  background: rgba(245, 241, 241, 0.973)
+}
+.slider{
+  float: right;
+  margin-right: 20px ;
+  
+}
+.slider span{
+  padding: 0 8px;
+}
+
+.slider button{
+  background: none;
+  border: none;
+  cursor : pointer;
+}
+button:focus{
+  outline: none !important;
+}
+.currentPage{
+
+  margin: 20px auto ;
+  text-align: center;
+}
